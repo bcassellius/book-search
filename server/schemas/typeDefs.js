@@ -10,6 +10,16 @@ const typeDefs = gql`
         books(username: String): [Book]
     }
 
+    # explained at https://medium.com/atheros/json-as-an-argument-for-graphql-mutations-and-queries-3cd06d252a04
+    input BookInput {
+        authors: [String]
+        description: String!
+        bookId: String!
+        image: String
+        link: String
+        title: String!
+    }
+
     type Mutation {
         login(email: String!, password: String!):Auth
         addUser(username: String!, email: String!, password: String!): Auth
