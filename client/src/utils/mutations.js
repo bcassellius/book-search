@@ -42,7 +42,7 @@ export const SAVE_BOOK = gql`
 // REMOVE_BOOK will execute the removeBook mutation
 export const REMOVE_BOOK = gql`
     mutation removeBook($id: ID!) {
-        saveBook(bookId: $id) {
+        removeBook(bookId: $id) {
             _id
             authors
             description
